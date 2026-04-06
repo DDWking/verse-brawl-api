@@ -35,10 +35,10 @@ jobs:
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SERVER_IP }}
-          username: root
+          username: ubuntu
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             cd /opt/verse-brawl
-            docker compose pull backend
-            docker compose up -d --no-deps backend
-            docker system prune -f
+            sudo docker compose pull backend
+            sudo docker compose up -d --no-deps backend
+            sudo docker system prune -f
