@@ -32,6 +32,12 @@
 		<version>8.0.33</version>
 		<scope>runtime</scope>
 	</dependency>
+	<!-- H2 内存数据库 -->
+	<dependency>
+		<groupId>com.h2database</groupId>
+		<artifactId>h2</artifactId>
+		<scope>runtime</scope>
+	</dependency>
 	<dependency>
 		<groupId>org.projectlombok</groupId>
 		<artifactId>lombok</artifactId>
