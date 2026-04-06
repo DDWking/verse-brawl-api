@@ -10,6 +10,8 @@ jobs:
     permissions:
       packages: write
       contents: read
+    env:
+      IMAGE_NAME: ghcr.io/ddwking/verse-brawl-backend
 
     steps:
       - name: Checkout code
@@ -27,7 +29,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/verse-brawl-backend:latest
+          tags: ${{ env.IMAGE_NAME }}:latest
 
       - name: Deploy to server
         uses: appleboy/ssh-action@v1.0.3
